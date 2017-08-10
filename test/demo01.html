@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>初学echarts</title>
+		<script>
+	      	var width = window.innerWidth || window.screen.width;
+	      	document.getElementById("html").style.fontSize = (width > 750 ? 750 : width)/750*100 + 'px';
+    	</script>
+		<script src="../js/echarts.js"></script>
+		<style type="text/css">
+			#main{
+				width: 6rem;
+				height: 6rem;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<!--dom-->
+		<div id="main"></div>
+		
+		<script src="./lib/core.js"></script>
+		<script type="text/javascript">
+			// 初始化
+			var myChart = echarts.init(document.getElementById('main'));
+			
+			// 配置项与数据
+			var option = {
+				title: {
+					text: 'Echarts'
+				},
+				tooltip: {},
+				legend: {
+					data: ['价格']
+				},
+				xAxis: {
+					data: ["香蕉", "苹果", "菠萝", "火龙果", "榴莲"]
+				},
+				yAxis: {},
+				series: [{
+					name: '价格',
+					type: 'bar',
+					data: [2, 3.5, 5, 4, 7]
+				}]
+			};
+			
+			// 显示图表
+			myChart.setOption(option);
+		</script>
+	</body>
+</html>
