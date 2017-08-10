@@ -1,0 +1,27 @@
+#main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 10rem;
+    height: 8rem;
+    margin: auto;
+    text-align: center;
+    line-height: 1.6;
+    >ul {
+        width: 50%;
+        margin: 0 auto;
+        >li{
+            a{
+                color: #f60;
+            }
+        }
+    }
+}
+
+#demo01{
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+}

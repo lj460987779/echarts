@@ -1,0 +1,8 @@
+###############
+#    folder   #
+###############
+/nodejs/node_modules/
+/resource/
+.idea/
+css/common.css
+dist/

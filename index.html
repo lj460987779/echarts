@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html id="html">
 	<head>
-		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+	    <meta content="email=no" name="format-detection" />
+	    <meta name="apple-touch-fullscreen" content="yes" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>初学echarts</title>
 		<script>
 	      	var width = window.innerWidth || window.screen.width;
 	      	document.getElementById("html").style.fontSize = (width > 750 ? 750 : width)/750*100 + 'px';
     	</script>
-		<script src="../js/echarts.js"></script>
-		<style type="text/css">
-			#main{
-				width: 6rem;
-				height: 6rem;
-				margin: 0 auto;
-			}
-		</style>
+    	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
 	</head>
 	<body>
 		<!--dom-->
-		<div id="main"></div>
+		<div id="app">
+			<div id="main">
+				<ul>
+					<li><a href="demo01.html">demo01，狠狠的戳这里！！！</a></li>
+					<li><a href="demo02.html">demo02，狠狠的戳这里！！！</a></li>
+					<li><a href="demo03.html">demo03，狠狠的戳这里！！！</a></li>
+				</ul>
+			</div>
+		</div>
 		
-		<script src="./lib/core.js"></script>
-		<script type="text/javascript">
+		
+		<script src="./js/core.js"></script>
+		<script src="./js/echarts.js"></script>
+		<!--<script type="text/javascript">
 			// 初始化
 			var myChart = echarts.init(document.getElementById('main'));
 			
@@ -48,6 +56,6 @@
 			
 			// 显示图表
 			myChart.setOption(option);
-		</script>
+		</script>-->
 	</body>
 </html>

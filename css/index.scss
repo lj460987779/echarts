@@ -1,0 +1,81 @@
+@import "./base.scss";
+@import "./config.scss";
+@import "./keys.scss";
+@import "main.scss";
+
+html{
+  font-size: 100px;
+}
+body{
+  font-size: .24rem;
+  background:#fff;
+}
+html,body{
+  height:100%;
+  display: block;
+  /*overflow: hidden;*/
+}
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 750px;
+    margin:auto;
+    z-index: 1;
+}
+
+/*三角形*/
+.triangle{
+    position: absolute;
+    top: 0;
+    left: -.56rem;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-width: .3rem;
+    border-style: solid dashed dashed;
+    border-color: #fff transparent transparent;
+    transform:rotateZ(90deg);
+}
+.clear:after{   
+    content:"";/*里面可以为空、内容的意思*/
+    visibility:hidden; /*隐藏*/
+    height:0;
+    display:block;
+    clear:both;
+    overflow:hidden;
+}
+.clear{
+    zoom: 1;/*这个转为解决IE6的bug的*/
+}
+/* loading */
+#loadbox{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    background-color: rgba(255, 255, 255, 1);
+    #load{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0.7rem;
+        height: 0.7rem;
+        margin: 0.2rem auto;
+        img{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.fadeout{
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+

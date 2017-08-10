@@ -1,0 +1,65 @@
+{
+	"dir" : {
+		"src" : {
+			"dir" : "../src/",
+			"html" : ["../*.html"],
+			"tpls" : "!../src/html/tpls/*.html",
+			"css" : ["../css/index.scss"],
+			"js" : "../js/**/*.js",
+			"jslib": ["../src/js/lib/zepto/zepto.js","../src/js/lib/swiper/swiper.js"],
+			"json" : "../json/*.json",
+			"img" : "../img/**/*.*"
+		},
+		"dest" : {
+			"dir" : "../",
+			"html" : "../",
+			"css" : "../css/",
+			"js" : "../js/",
+			"img" : "../img/"
+		},
+		"dist" : {
+			"dir" : "../dist/",
+			"html" : "../dist/",
+			"css" : "../dist/css/",
+			"js" : "../dist/js/",
+			"img" : "../dist/img/",
+			"json" : "../dist/json/"
+		},
+		"watch" : {
+			"css" : "../css/**/*.scss",
+			"html" : "../*.html",
+			"js" : ["../js/*.js"],
+			"img" : ["../img/*.*"]
+		}
+	},
+	"plugins" : {
+		"autoprefixer" : {
+			"browsers": ["last 2 versions", "Android >= 2.5" , "iOS 6"]
+		},
+		"cleanCss" : {
+			"advanced": true,
+            "compatibility": "",
+            "keepBreaks": false
+		},
+		"babel" : {
+			"presets": ["es2015"]
+		},
+		"concat" : "core.js",
+		"concatcss" : "common.css",
+		"uglify" : {
+			"mangle": true,
+            "compress": true
+		},
+		"fileInclude" : {
+			"prefix": "@@",
+      		"basepath": "@file"
+		}
+	},
+	"rev" : {
+      "revJson": "../dist/rev/**/*.json",
+      "src": "../dist/*.html",
+      "dest": "../dist/",
+			"js" :"../dist/rev/js",
+			"css" :"../dist/rev/css"
+  }
+}
