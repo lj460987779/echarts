@@ -9,7 +9,6 @@ let fs = require('fs'),
     httpProxyMiddleware = require('http-proxy-middleware'),
     opts = JSON.parse(fs.readFileSync('config.json'));
     
-var echarts = require('echarts');
 var https = require('https');
 const isPro = gulp.env.pro === undefined ? false : gulp.env.pro;
 //console.log($);
