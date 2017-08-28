@@ -14,18 +14,17 @@
 	<body>
 		<!--dom-->
 		<div id="app">
-			<div id="demo02">
+			<div id="demo04">
 				
 			</div>
 		</div>
 		
 		
-		<script src="./js/core.js"></script>
 		<script src="./js/echarts.js"></script>
 		<script src="./js/china.js"></script>
 		<script type="text/javascript">
 			// 初始化
-			var myChart = echarts.init(document.getElementById('demo02'));
+			var myChart = echarts.init(document.getElementById('demo04'));
 			
 			var allData = {
     "citys": [{
@@ -3463,10 +3462,10 @@ option = {
         lineStyle: {
             normal: {
                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                    offset: 0,
+                    offset: 1,
                     color: '#58B3CC'
                 }, {
-                    offset: 1,
+                    offset: 0,
                     color: '#F58158'
                 }], false),
                 width: 1,

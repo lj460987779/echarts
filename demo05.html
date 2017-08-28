@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>饼状图</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	</head>
+	<body>
+		<div id="demo05">
+			
+		</div>
+		<script src="./js/echarts.js"></script>
+		<script type="text/javascript">
+			// 初始化
+			var myChart = echarts.init(document.getElementById('demo05'));
+			
+			// 数据
+			var dataClass = ['直达','营销广告','搜索引擎','邮件营销','联盟广告','视频广告','百度','谷歌','必应','其他'];
+			
+			// 配置项与资源
+			var option = {
+				backgroundColor: '#404a59',
+				title: {
+					text: '饼图',
+					textStyle: {
+						align: 'center',
+						color: '#fff'
+					}
+				},
+				tooltip: {
+					trigger: 'item',
+					triggerOn: 'click',
+					transitionDuration: 0.5
+				},
+				legend: {
+					orient: 'vertical',
+					data: dataClass
+				},
+				series: [
+					{
+						name: '访问来源',
+						type: 'pie'
+					}
+				]
+			};
+			
+			// 显示图表
+			myChart.setOption(option);
+		</script>
+	</body>
+</html>

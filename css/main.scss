@@ -20,15 +20,20 @@
     }
 }
 
-#demo01, #demo02{
+#demo01{
     width: 6rem;
     height: 6rem;
     margin: 0 auto;
     padding-top: 0.4rem;
 }
-#demo03{
-    width: 8rem;
-    height: 8rem;
+#demo03, #demo04, #demo02{
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     padding-top: 0.2rem;
+}
+#demo05{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
 }
