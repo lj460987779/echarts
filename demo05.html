@@ -19,27 +19,39 @@
 			
 			// 配置项与资源
 			var option = {
-				backgroundColor: '#404a59',
+				backgroundColor: '#f2f2f2',
 				title: {
 					text: '饼图',
 					textStyle: {
 						align: 'center',
-						color: '#fff'
+						color: '#404a59'
 					}
 				},
 				tooltip: {
 					trigger: 'item',
-					triggerOn: 'click',
-					transitionDuration: 0.5
+					formatter: "{a}<br/>{b}: {c} ({d}%)"
 				},
 				legend: {
 					orient: 'vertical',
+					x: 'left',
 					data: dataClass
 				},
 				series: [
+					
 					{
 						name: '访问来源',
-						type: 'pie'
+						type: 'pie',
+						radius: ['40%', '55%'],
+						data: [
+							{value:335, name:'直达'},
+			                {value:310, name:'邮件营销'},
+			                {value:234, name:'联盟广告'},
+			                {value:135, name:'视频广告'},
+			                {value:1048, name:'百度'},
+			                {value:251, name:'谷歌'},
+			                {value:147, name:'必应'},
+			                {value:102, name:'其他'}
+						]
 					}
 				]
 			};
