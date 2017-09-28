@@ -21,7 +21,7 @@
 			var option = {
 				backgroundColor: '#f2f2f2',
 				title: {
-					text: '饼图',
+					
 					textStyle: {
 						align: 'center',
 						color: '#404a59'
@@ -37,7 +37,28 @@
 					data: dataClass
 				},
 				series: [
-					
+			        {
+			            name:'访问来源',
+			            type:'pie',
+			            selectedMode: 'single',
+			            radius: [0, '30%'],
+			
+			            label: {
+			                normal: {
+			                    position: 'inner'
+			                }
+			            },
+			            labelLine: {
+			                normal: {
+			                    show: false
+			                }
+			            },
+			            data:[
+			                {value:335, name:'直达', selected:true},
+			                {value:679, name:'营销广告'},
+			                {value:1548, name:'搜索引擎'}
+			            ]
+			        },
 					{
 						name: '访问来源',
 						type: 'pie',
